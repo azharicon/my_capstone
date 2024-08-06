@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #e0f7fa; margin: 0; padding: 0; }
+        .container { margin-left: 220px; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .header, .section { margin-bottom: 30px; }
+        .header { text-align: center; }
+        .header img { max-width: 200px; border-radius: 50%; }
+        .header h1 { margin: 20px 0 10px; }
+        .header p { margin: 0 0 20px; }
+        .section h2 { margin-bottom: 10px; color: #333; }
+        .resume-list, .social-links { display: flex; justify-content: space-between; flex-wrap: wrap; }
+        .resume-list a { flex: 1; margin-right: 10px; text-align: center; padding: 10px; background-color: #e9e9e9; border-radius: 5px; text-decoration: none; color: #333; }
+        .resume-list a:last-child { margin-right: 0; }
+        .videos { display: flex; flex-wrap: wrap; gap: 20px; }
+        .video-container { flex: 1; min-width: 30%; position: relative; }
+        .video-container iframe { width: 100%; height: 300px; border-radius: 5px; border: none; }
+        .video-container h3 { text-align: center; margin-top: 5px; }
+        .social-links { justify-content: center; gap: 20px; background-color: #0077b5; padding: 20px; border-radius: 10px; }
+        .social-links a { flex: 1; display: flex; justify-content: center; align-items: center; padding: 10px; text-decoration: none; color: #fff; transition: color 0.3s; }
+        .social-links a:hover { color: #333; }
+        .photo-caption { text-align: center; margin-top: 5px; font-size: 14px; color: #666; padding: 10px; }
+        .photos { display: flex; flex-wrap: wrap; gap: 10px; }
+        .photo-item { flex: 1 1 calc(50% - 10px); max-width: calc(50% - 10px); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; overflow: hidden; margin-bottom: 10px; background-color: #fff; }
+        .photo-item img { width: 100%; height: auto; display: block; max-width: 100%; max-height: 300px; object-fit: cover; border-radius: 5px; }
+        @media (max-width: 768px) { .photo-item { flex: 1 1 100%; max-width: 100%; } }
+        .navbar { display: flex; flex-direction: column; position: fixed; top: 0; left: 0; width: 200px; height: 100%; background-color: #333; padding: 20px; box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); }
+        .navbar a { color: #fff; text-decoration: none; padding: 10px; margin: 5px 0; display: block; transition: background-color 0.3s; }
+        .navbar a:hover { background-color: #575757; }
+        .mobile-toggle { display: none; }
+        @media (max-width: 768px) { .container { margin-left: 0; } .navbar { display: none; } .mobile-toggle { display: block; } }
+        footer { text-align: center; padding: 20px; background-color: #333; color: #fff; margin-top: 30px; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <button class="mobile-toggle" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
+    <div class="navbar" id="navbar">
+        <a href="#resume">Resume</a>
+        <a href="#videos">Videos</a>
+        <a href="#photographic-essay">Photographic Essay</a>
+        <a href="#connect">Let's Connect</a>
+    </div>
+    <div class="container">
+        <div class="header">
+            <img src='/images/sam.jpg' alt="Samuel Wainaina">
+            <h1>Samuel Wainaina's Capstone Project</h1>
+            <p>Welcome to my capstone project website where you can find all my project contents.</p>
+        </div>
+        <div id="resume" class="section">
+            <h2>Resume</h2>
+            <div class="resume-list">
+                <a href="/documents/mtaala_vitae.pdf" target="_blank">Kiswahili Resume</a>
+                <a href="/documents/cv.pdf" target="_blank">English Resume</a>
+                <a href="/documents/WIRIRI_WA_CIRIMUKEA.pdf" target="_blank">Kikuyu Resume</a>
+                <a href="/documents/My_autobiography.pdf" target="_blank">Autobiography</a>
+                <a href="/documents/ppt_autobiography.pdf" target="_blank">Autobiography Presentation</a>
+                <a href="/documents/innovation_in_bbit.pdf" target="_blank">Innovation</a>
+            </div>
+        </div>
+        <div id="videos" class="section">
+            <h2>Videos</h2>
+            <div class="videos">
+                <div class="video-container">
+                    <h3>Presentation</h3>
+                    <iframe src="https://drive.google.com/file/d/1Y-PGQXB3t6s2yWEZiYZfUJSzZMq1RxUX/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="video-container">
+                    <h3>Innovation in BBIT</h3>
+                    <iframe src="https://drive.google.com/file/d/1kdXGWH0tZedaYVGEAP1n9LjVL785gaFI/preview" allow="autoplay"></iframe>
+                </div>
+                <div class="video-container">
+                    <h3>Challenges Facing Modern Society</h3>
+                    <iframe src="https://drive.google.com/file/d/13b36mk0tuUZOFWWGuGzoj6DvLvCdC8C3/preview" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="photographic-essay" class="section">
+            <h2>Photographic Essay</h2>
+            <div class="photos">
+                <a href="/documents/bridging_the_education_sector.pdf" target="_blank">Bridging the Education Sector</a>
+            </div>
+        </div>
+        <div id="connect" class="section">
+            <h2>Let's Connect</h2>
+            <div class="social-links">
+                <a href="https://x.com/Azhar0301188176" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://www.instagram.com/azh.ar2116/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com/in/samuel-mathews-922956319" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.facebook.com/samuelmathew23" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://wa.me/0115616947" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Samuel Wainaina. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            if (navbar.style.display === "block") {
+                navbar.style.display = "none";
+            } else {
+                navbar.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
